@@ -3,14 +3,14 @@ import java.util.ArrayList;
 public class Category {
 	//variables
 	String _type;
-	ArrayList <sport> _sport;
+	ArrayList <Sport> _sport;
 
-	public ArrayList<sport> get_sport() {
+	public ArrayList<Sport> get_sport() {
 		return _sport;
 	}
 
-	public void set_sport(ArrayList<sport> _sport) { //
-		this._sport = new ArrayList<sport>();
+	public void set_sport(ArrayList<Sport> _sport) { //
+		this._sport = new ArrayList<Sport>();
 	}
 
 	public String getType() { //get type
@@ -21,14 +21,14 @@ public class Category {
 		this._type = type;
 	}
 	
-	public void addSport(ArrayList<sport> _sport , Sport new_sport) {
+	public void addSport(ArrayList<Sport> _sport , Sport new_sport) {
 		
 		int listSize = _sport.size();
 		for(int i = 0; i < listSize; ++i)
 		  _sport.add(new_sport);
 	}
 	
-	public void removeSport (ArrayList<sport> _sport , Sport old_sport) {
+	public void removeSport (ArrayList<Sport> _sport , Sport old_sport) {
 		
 		int listSize = _sport.size();
 		for(int i = 0; i < listSize; ++i) {

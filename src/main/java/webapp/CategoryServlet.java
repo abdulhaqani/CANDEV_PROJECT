@@ -14,10 +14,14 @@ public class CategoryServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
 		request.getRequestDispatcher("WEB-INF/views/category.jsp").forward(request, response);
 
+		
+	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
 	}
 }
 

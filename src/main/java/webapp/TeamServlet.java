@@ -19,4 +19,9 @@ public class TeamServlet extends HttpServlet{
 		request.getRequestDispatcher("WEB-INF/views/team.jsp").forward(request, response);
 
 	}
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
+		
+		
+
+	}
 }

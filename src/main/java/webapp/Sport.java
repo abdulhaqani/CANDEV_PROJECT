@@ -10,11 +10,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns = "/Sport")
-public class Sport extends HttpServlet {
+
+public class Sport{
 	
 
-	private static final long serialVersionUID = 1L;
 	ArrayList<Organization> organizations=new ArrayList<Organization>();
 	String sport;
 	boolean group; 
@@ -33,18 +32,6 @@ public class Sport extends HttpServlet {
 	public Sport get_Sport() {
 		return this;
 	}
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("My First Servlet");
-		out.println("</body>");
-		out.println("</html>");
-
-	}
+	
 
 }

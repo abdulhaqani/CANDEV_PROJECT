@@ -12,11 +12,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns="/category")
-public class Category extends HttpServlet{
+
+public class Category{
 	//variables
 	
-	private static final long serialVersionUID = 1L;
 	String _type;
 	ArrayList <Sport> _sport;
 
@@ -32,8 +31,8 @@ public class Category extends HttpServlet{
 		return _type;
 	}
 
-	public void setType(String type) { //set type
-		this._type = type;
+	public void setType(String types) { //set type
+		this._type = types;
 	}
 	
 	public void addSport(ArrayList<Sport> _sport , Sport new_sport) {
@@ -54,18 +53,6 @@ public class Category extends HttpServlet{
 		}
 		
 	}
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("My First Servlet");
-		out.println("</body>");
-		out.println("</html>");
-
-	}
+	
 
 }

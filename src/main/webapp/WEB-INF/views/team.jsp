@@ -17,7 +17,7 @@
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
 
-    <title>Categories</title>
+    <title>Team</title>
 
     <!-- Bootstrap core CSS -->
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -38,29 +38,15 @@
 <div class="container">
 	<div class="row">
 		<h3>Status Upload Snipp</h3>
+		
 	</div>
+	<form action="addFeedback.php" method="post">
+    <label>feedback</label>
+	<input type="text" name="feedback"/>
+	<input type="submit" name=submit value="Submit"/>
+										
+	</form>
     
-    <div class="row">
-    
-    <div class="col-md-6">
-    						<div class="widget-area no-padding blank">
-								<div class="status-upload">
-									<form>
-									
-										<textarea placeholder="What do you think of us?" ></textarea>
-										<ul>
-											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Audio"><i class="fa fa-music"></i></a></li>
-											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Video"><i class="fa fa-video-camera"></i></a></li>
-											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Sound Record"><i class="fa fa-microphone"></i></a></li>
-											<li><a title="" data-toggle="tooltip" data-placement="bottom" data-original-title="Picture"><i class="fa fa-picture-o"></i></a></li>
-										</ul>
-										<button type="submit" class="btn btn-success green"><i class="fa fa-share"></i>Comment</button>
-									</form>
-								</div><!-- Status Upload  -->
-							</div><!-- Widget Area -->
-						</div>
-        
-    </div>
 </div>
   <!-- Fixed navbar -->
     <nav class="navbar navbar-default navbar-fixed-top">
@@ -72,7 +58,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="#"><B>Categories</B></a>
+          <a class="navbar-brand" href="#"><B>Team</B></a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">

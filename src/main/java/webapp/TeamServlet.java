@@ -14,14 +14,17 @@ public class TeamServlet extends HttpServlet{
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
-
+@Override
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		request.getRequestDispatcher("WEB-INF/views/team.jsp").forward(request, response);
+		request.getRequestDispatcher("WEB-INF/views/feedback.jsp").forward(request, response);
 
 	}
+@Override
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException, ServletException {
-		
-		
-
+		request.getRequestDispatcher("WEB-INF/views/feedback.jsp").forward(request, response);
+		String name = request.getParameter("name");
+		String email = request.getParameter("email");
+		String feedback=request.getParameter("message");
+		response.getWriter().println(name+email+feedback);
 	}
 }

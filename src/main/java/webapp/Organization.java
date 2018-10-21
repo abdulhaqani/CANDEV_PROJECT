@@ -9,12 +9,10 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns="/organization")
 
-public class Organization extends HttpServlet{
+public class Organization {
 	
 	
-	private static final long serialVersionUID = 1L;
 	private String name;
 	private String address;
 	private ArrayList<Team> teams;
@@ -83,17 +81,5 @@ public class Organization extends HttpServlet{
 		}
 		return (rating / teams.size());
 	}
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		PrintWriter out = response.getWriter();
-		out.println("<html>");
-		out.println("<head>");
-		out.println("<title>Yahoo!!!!!!!!</title>");
-		out.println("</head>");
-		out.println("<body>");
-		out.println("My First Servlet");
-		out.println("</body>");
-		out.println("</html>");
-
-	}
+	
 }

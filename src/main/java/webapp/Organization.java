@@ -1,27 +1,42 @@
+package webapp;
 import java.util.ArrayList;
+import java.io.IOException;
+import java.io.PrintWriter;
 
-public class Organization {
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(urlPatterns="/organization")
+
+public class Organization extends HttpServlet{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private String name;
 	private String address;
-	private ArrayList<Category> categories;
+	private ArrayList<Team> teams;
 	private float rating;
 	
 	// all members
 	public Organization (String _name, String _address,
-			ArrayList<Category> _categories, float _rating) {
+			ArrayList<Team> _teams, float _rating) {
 		this.name = _name;
 		this.address = _address;
-		this.categories = _categories;
+		this.teams = _teams;
 		this.rating = _rating;
 	}
 	
 	// add organization
 	public Organization (String _name, String _address,
-			ArrayList<Category> _categories) {
+			ArrayList<Team> _teams) {
 		this.name = _name;
 		this.address = _address;
-		this.categories = _categories;
+		this.teams = _teams;
 	}	
 	
 	// short initialization
@@ -46,12 +61,12 @@ public class Organization {
 		this.address = _address;
 	}
 
-	public ArrayList<Category> get_categories() {
-		return categories;
+	public ArrayList<Team> get_teams() {
+		return teams;
 	}
 
-	public void set_categories(ArrayList<Category> _categories) {
-		this.categories = _categories;
+	public void set_teams(ArrayList<Team> _teams) {
+		this.teams = _teams;
 	}
 
 	public float get_rating() {
@@ -62,16 +77,25 @@ public class Organization {
 		this.rating = _rating;
 	}
 	
+	@SuppressWarnings("unused")
 	private float CalculateRating() {
 		float rating = 0;
-		int num_of_sports = 0;
-		for (int i = 0; i < categories.size(); i++) {
-			for (int j = 0; j < categories.get(i).getSports().size(); j++) {
-				num_of_sports++;
-				rating += categories.get(i).getSports().get(j).getRating();
-			}
+		for (int i = 0; i < teams.size(); i++) {
+			rating += teams.get(i).get_rating();
 		}
-		return (rating / num_of_sports);
+		return (rating / teams.size());
 	}
-	
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet");
+		out.println("</body>");
+		out.println("</html>");
+
+	}
 }

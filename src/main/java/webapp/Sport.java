@@ -10,24 +10,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-@WebServlet(urlPatterns = "/login.do")
+@WebServlet(urlPatterns = "/Sport")
 public class Sport extends HttpServlet {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	ArrayList<Organization> organizations=new ArrayList<Organization>();
 	String sport;
 	boolean group; 
 	String description;
-	public Sport(String whatSport, boolean isGroup, String descriptionOfSport) {
-		this.sport=whatSport;
-		this.group=isGroup;
-		this.description=descriptionOfSport;
+	public Sport(String _Sport, boolean _Group, String _description) {
+		this.sport=_Sport;
+		this.group=_Group;
+		this.description=_description;
 	}
 	public void add(Organization org) {
 		organizations.add(org);
 	}
-	public Organization getOrganization(int index) {
-		return organizations(index);
+	public Organization get_organization(int index) {
+		return this.organizations.get(index);
 	}
-	public Sport getSport() {
+	public Sport get_Sport() {
 		return this;
 	}
 	@Override

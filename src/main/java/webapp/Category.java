@@ -1,13 +1,28 @@
 package webapp;
 
+
+
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 
-public class Category {
+import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+
+@WebServlet(urlPatterns="/category")
+public class Category extends HttpServlet{
 	//variables
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	String _type;
 	ArrayList <Sport> _sport;
 
-	public ArrayList<Sport> get_sport() {
+	public ArrayList<Sport> getSport() {
 		return _sport;
 	}
 
@@ -34,12 +49,25 @@ public class Category {
 		
 		int listSize = _sport.size();
 		for(int i = 0; i < listSize; ++i) {
-			if (old_sport == _sport) {
+			if (old_sport == _sport.get(i)) {
 				_sport.remove(i);
 				
 			}
 		}
 		
+	}
+	@Override
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+		PrintWriter out = response.getWriter();
+		out.println("<html>");
+		out.println("<head>");
+		out.println("<title>Yahoo!!!!!!!!</title>");
+		out.println("</head>");
+		out.println("<body>");
+		out.println("My First Servlet");
+		out.println("</body>");
+		out.println("</html>");
+
 	}
 
 }

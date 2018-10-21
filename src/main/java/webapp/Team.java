@@ -1,20 +1,11 @@
 package webapp;
-
-import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import javax.servlet.annotation.WebServlet;
-import javax.servlet.http.HttpServlet;
-import javax.servlet.http.HttpServletRequest;
-import javax.servlet.http.HttpServletResponse;
 
-@WebServlet(urlPatterns = "/team")
-public class Team extends HttpServlet {
-	/**
-	 * 
-	 */
-	private static final long serialVersionUID = 1L;
+
+public class Team {
+	
+	
 	String name;
 	float rating; 
 	ArrayList<String> feedback;
@@ -43,10 +34,6 @@ public class Team extends HttpServlet {
 	public void set_rating(float _rating) {
 		this.rating=_rating;
 	}
-	@Override
-	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
-		response.getWriter().println("some shit");
-
-	}
-
+	
+	
 }

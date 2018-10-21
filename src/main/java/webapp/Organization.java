@@ -13,9 +13,7 @@ import javax.servlet.http.HttpServletResponse;
 
 public class Organization extends HttpServlet{
 	
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	private String name;
 	private String address;

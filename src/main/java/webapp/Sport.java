@@ -12,9 +12,8 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet(urlPatterns = "/Sport")
 public class Sport extends HttpServlet {
-	/**
-	 * 
-	 */
+	
+
 	private static final long serialVersionUID = 1L;
 	ArrayList<Organization> organizations=new ArrayList<Organization>();
 	String sport;

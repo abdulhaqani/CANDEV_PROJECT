@@ -15,9 +15,7 @@ import javax.servlet.http.HttpServletResponse;
 @WebServlet(urlPatterns="/category")
 public class Category extends HttpServlet{
 	//variables
-	/**
-	 * 
-	 */
+	
 	private static final long serialVersionUID = 1L;
 	String _type;
 	ArrayList <Sport> _sport;
